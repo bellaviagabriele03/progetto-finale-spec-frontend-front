@@ -19,6 +19,7 @@ Salvare i preferiti
 - REACT + VITE
 - tailwindCSS
 - lucide-react
+- react-router-dom
 
 ### LINGUAGGI:
 - HTML
