@@ -1,16 +1,29 @@
-# React + Vite
+# <3 PROGETTO FINALE SPECIALIZZAZIONE FRONT END   
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## </> TEMA SOFTWARE </>
+<hr>
 
-Currently, two official plugins are available:
+## GOALS:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+REALIZZARE
+Una SPA che simula l’esperienza di un utente non autenticato, che può:
 
-## React Compiler
+Sfogliare, cercare e filtrare record
+Confrontare più elementi tra loro
+Salvare i preferiti
+❌ Non può creare, modificare o cancellare record.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<hr>
 
-## Expanding the ESLint configuration
+### TECNOLOGIE: 
+- REACT + VITE
+- tailwindCSS
+- lucide-react
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### LINGUAGGI:
+- HTML
+- CSS
+- JAVASCRIPT  
+
+
+
