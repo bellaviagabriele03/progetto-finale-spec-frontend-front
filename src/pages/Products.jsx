@@ -10,7 +10,7 @@ export default function Products() {
 
     const { softwares } = useGlobalContext();
     const [query, setQuery] = useState("");
-
+    console.log(softwares)
     const filterSoftware = useMemo(() => {
         if (!softwares) return []
         return [...softwares].filter(p => p.title.toLowerCase().includes(query.toLowerCase()))
@@ -18,7 +18,7 @@ export default function Products() {
 
     return (
         <>
-            <h1 className="bg-emerald-600 text-black text-center">Lista dei Prodotti</h1>
+            <h1 className="bg-emerald-600 text-center text-6xl">Lista dei Prodotti</h1>
             <div className="ml-25 relative min-h-screen">
                 <ParticleBackground />
                 <div>

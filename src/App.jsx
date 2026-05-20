@@ -5,6 +5,7 @@ import Products from "./pages/Products"
 import WishList from "./pages/WishList"
 import Comparator from "./pages/Comparator"
 import GlobalContextProvider from "./context/GlobalContext"
+import ProductDetail from "./pages/ProductDetail"
 function App() {
 
 
@@ -19,6 +20,7 @@ function App() {
               <Route path="/products" element={<Products />} />
               <Route path="/wishlist" element={<WishList />} />
               <Route path="/comparator" element={<Comparator />} />
+              <Route path="/products/:id" element={<ProductDetail />} />
             </Route>
           </Routes>
         </GlobalContextProvider>
