@@ -4,22 +4,27 @@ import Home from "./pages/Home"
 import Products from "./pages/Products"
 import WishList from "./pages/WishList"
 import Comparator from "./pages/Comparator"
-
+import GlobalContextProvider from "./context/GlobalContext"
 function App() {
 
 
   return (
     <>
+
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<DefaultLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/wishlist" element={<WishList />} />
-            <Route path="/comparator" element={<Comparator />} />
-          </Route>
-        </Routes>
+        <GlobalContextProvider>
+          <Routes>
+            <Route path="/" element={<DefaultLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/wishlist" element={<WishList />} />
+              <Route path="/comparator" element={<Comparator />} />
+            </Route>
+          </Routes>
+        </GlobalContextProvider>
       </BrowserRouter>
+
+
     </>
   )
 }

@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { tsParticles } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
 
-// Header colors: emerald-600 #059669 | lime-400 #a3e635 | yellow-400 #facc15 | gray-700 #374151
 let initPromise = null;
 
 export default function ParticleBackground() {

@@ -20,6 +20,8 @@ Salvare i preferiti
 - tailwindCSS
 - lucide-react
 - react-router-dom
+- tsparticles 
+
 
 ### LINGUAGGI:
 - HTML

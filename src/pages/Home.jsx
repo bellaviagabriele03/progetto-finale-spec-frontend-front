@@ -2,11 +2,11 @@ import ParticleBackground from "../components/ParticleBackground";
 
 export default function Home() {
     return (<>
-        <h1 className="bg-emerald-600 text-black">Benvenuto nel mio Progetto Finale !!</h1>
-        <div className="ml-25 p-3 relative min-h-screen">
+        <h1 className="bg-emerald-600 ">Benvenuto nel mio Progetto Finale !!</h1>
+        <div className="ml-25 p-3 relative min-h-screen bg-blue-400">
             <ParticleBackground />
-            <div style={{ position: "relative", zIndex: 1 }}>
-                <section className="bg-emerald-600 text-black">
+            <div className="" style={{ position: "relative", zIndex: 1 }}>
+                <section className="bg-emerald-600 p-2 rounded-2xl">
                     <h2>
                         OBBIETTIVO:
                     </h2>
