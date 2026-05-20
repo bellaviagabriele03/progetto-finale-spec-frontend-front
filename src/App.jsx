@@ -1,11 +1,18 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import DefaultLayout from "./layouts/DefaultLayout"
 
 function App() {
 
 
   return (
     <>
-      <h1 className="text-center bg-amber-300">test-tailwind</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<DefaultLayout />}>
+          
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
