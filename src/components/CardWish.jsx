@@ -1,9 +1,10 @@
 import { useGlobalContext } from "../context/GlobalContext"
-import { Star } from "lucide-react";
-export default function CardWish({ obj }) {
+import { Star, Trash } from "lucide-react";
+import { memo } from "react";
+export default memo(function CardWish({ obj }) {
 
 
-    const { addwishList } = useGlobalContext();
+    const { addwishList, removeWishList } = useGlobalContext();
 
 
     return (
@@ -17,15 +18,14 @@ export default function CardWish({ obj }) {
                         Categoria: {obj.category}
                     </span>
                 </div>
-
                 <button
                     onClick={() => {
-                        addwishList(obj.id)
+                        removeWishList(obj.id)
                     }}
-                    className="mt-3 text-yellow-300 hover:text-red-700 cursor-pointer ">
-                    <Star size={30} />
+                    className="mt-3  text-red-700 cursor-pointer hover:text-gray-700">
+                    <Trash size={30} />
                 </button>
             </div>
         </>
     )
-}
+})

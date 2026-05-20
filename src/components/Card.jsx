@@ -1,10 +1,11 @@
 import { useGlobalContext } from "../context/GlobalContext"
 import { Star } from "lucide-react";
-export default function Card({ obj }) {
+import { memo } from "react";
+export default memo(function Card({ obj }) {
 
 
     const { addwishList } = useGlobalContext();
-    
+
 
     return (
         <>
@@ -28,4 +29,4 @@ export default function Card({ obj }) {
             </div>
         </>
     )
-}
+})

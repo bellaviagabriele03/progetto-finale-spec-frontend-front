@@ -6,9 +6,15 @@ export default function useSoftware() {
 
     const [softwares, setSoftwares] = useState([]);
     const back = import.meta.env.VITE_BACK;
-    const [wishList, setWishList] = useState([])
+    const [wishList, setWishList] = useState(() => {
+        const saved = localStorage.getItem("wishList");
+        return saved ? JSON.parse(saved) : [];
+    });
 
-    
+    useEffect(() => {
+        localStorage.setItem("wishList", JSON.stringify(wishList));
+    }, [wishList]);
+
 
 
     useEffect(() => {
@@ -22,8 +28,10 @@ export default function useSoftware() {
     function addwishList(id) {
         const software = softwares.find(s => s.id === id)
 
-        setWishList(prev => [...prev, software])
-
+        setWishList(prev => {
+            if (prev.some(s => s.id === id)) return prev;
+            return [...prev, software];
+        })
     }
 
 
