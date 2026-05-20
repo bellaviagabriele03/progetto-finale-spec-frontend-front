@@ -22,7 +22,7 @@ export default function Header() {
     return (
         <header className="bg-gradient-to-b from-emerald-600 to-gray-700 text-lime-400 fixed top-0 left-0 bottom-0 w-25">
             <nav className="flex flex-col justify-around items-center h-full">
-                {links.map((l, i) => { return (<div><NavLink to={l.path}>{l.icon}</NavLink></div>) })}
+                {links.map((l, i) => { return (<div className="hover:text-yellow-400"><NavLink to={l.path}>{l.icon}</NavLink></div>) })}
             </nav>
         </header>
     )
