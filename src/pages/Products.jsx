@@ -103,61 +103,28 @@ export default function Products() {
                         </>)}
 
 
-                        {selectQuery !== "" && (<>
+                        {(selectQuery !== "" || query !== "" || sortBy === "title" || sortBy === "category") && (
                             <div>
                                 <button
                                     onClick={() => {
                                         setSelectQuery("")
                                         setQuery("")
-                                        setshow(!show)
-                                    }}
-                                    className="bg-gradient-to-r from-emerald-600 to-gray-700 p-4 rounded-3xl w-full mt-3 text-sky-400 cursor-pointer">Rimuovi filtri</button>
-                            </div>
-
-                        </>)}
-                        {query !== "" && (<>
-                            <div>
-                                <button
-                                    onClick={() => {
-                                        setSelectQuery("")
-                                        setQuery("")
-                                        setshow(!show)
-                                    }}
-                                    className="bg-gradient-to-r from-emerald-600 to-gray-700 p-4 rounded-3xl w-full mt-3 text-sky-400 cursor-pointer">Rimuovi filtri</button>
-                            </div>
-                        </>)}
-                        {sortBy === "title" && (<>
-                            <div>
-                                <button
-                                    onClick={() => {
-                                        setSelectQuery("")
-                                        setQuery("")
-                                        setshow(!show)
+                                        setshow(false)
                                         setSortOrder(1)
                                         setSortBy("videogiochi")
                                     }}
-                                    className="bg-gradient-to-r from-emerald-600 to-gray-700 p-4 rounded-3xl w-full mt-3 text-sky-400 cursor-pointer">Rimuovi filtri</button>
+                                    className="bg-gradient-to-r from-emerald-600 to-gray-700 p-4 rounded-3xl w-full mt-3 text-sky-400 cursor-pointer">
+                                    Rimuovi filtri
+                                </button>
                             </div>
-                        </>)}
-                        {sortBy === "category" && (<>
-                            <div>
-                                <button
-                                    onClick={() => {
-                                        setSelectQuery("")
-                                        setQuery("")
-                                        setshow(!show)
-                                        setSortOrder(1)
-                                        setSortBy("videogiochi")
-                                    }}
-                                    className="bg-gradient-to-r from-emerald-600 to-gray-700 p-4 rounded-3xl w-full mt-3 text-sky-400 cursor-pointer">Rimuovi filtri</button>
-                            </div>
-                        </>)}
+                        )}
                     </form>
 
                 </div>
                 <div className="" style={{ position: "relative", zIndex: 1 }}>
                     <div className="flex p-3 gap-2 flex-wrap flex-col">
-                        {filterSoftware.map(s => <Card key={s.id} obj={s} />)}
+                        {filterSoftware.length > 0 && filterSoftware.map(s => <Card key={s.id} obj={s} />)}
+                        {filterSoftware.length <= 0 && (<><p className="bg-gradient-to-r from-emerald-600 to-gray-700 p-4 rounded-3xl w-full mt-3">Nessun prodotto trovato</p></>)}
                     </div>
                 </div>
             </div>
