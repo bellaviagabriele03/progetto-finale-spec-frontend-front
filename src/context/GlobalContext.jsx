@@ -7,7 +7,6 @@ const GlobalContext = createContext()
 
 export default function GlobalContextProvider({ children }) {
     const softData = useSoftware();
-
     return (
         <GlobalContext.Provider value={{ ...softData }}>
             {children}

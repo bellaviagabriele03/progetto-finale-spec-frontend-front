@@ -1,12 +1,10 @@
 import { useGlobalContext } from "../context/GlobalContext"
-import { Star, Eye } from "lucide-react";
+import { Star, Eye, Scale } from "lucide-react";
 import { memo } from "react";
 import { NavLink } from "react-router-dom";
 export default memo(function Card({ obj }) {
 
-
-    const { addwishList } = useGlobalContext();
-
+    const { addwishList, addCompar } = useGlobalContext();
 
 
 
@@ -35,6 +33,13 @@ export default memo(function Card({ obj }) {
                         className="mt-3 ml-4 text-sky-400 cursor-pointer hover:text-red-700">
                         <Eye size={40} />
                     </NavLink>
+                    <button
+                        onClick={() => {
+                            addCompar(obj.id)
+                        }}
+                        className="mt-3 ml-4 text-pink-700 cursor-pointer hover:text-red-700">
+                        <Scale size={40} />
+                    </button>
                 </div>
 
             </div>

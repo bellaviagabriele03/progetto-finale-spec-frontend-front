@@ -38,12 +38,24 @@ export default function useSoftware() {
     function removeWishList(id) {
         const software = softwares.find(s => s.id === id)
         setWishList(prev => prev.filter(s => s.id !== id))
-
     }
 
+    const [elemToCompar, setElemToCompar] = useState([]);
 
+    function addCompar(id) {
+        const elem = softwares.find(s => s.id === id);
+        setElemToCompar(prev => {
+            if (prev.length >= 2) return prev;
+            if (prev.some(s => s.id === id)) return prev;
+            return [...prev, elem];
+        });
+    }
 
-    return { addwishList, removeWishList, setSoftwares, setWishList, softwares, wishList, }
+    function removeCompar(id) {
+        setElemToCompar(prev => prev.filter(s => s.id !== id));
+    }
+
+    return { addwishList, removeWishList, setSoftwares, setWishList, softwares, wishList, elemToCompar, setElemToCompar, addCompar, removeCompar }
 
 
 }
