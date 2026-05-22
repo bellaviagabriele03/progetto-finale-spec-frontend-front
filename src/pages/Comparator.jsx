@@ -24,9 +24,9 @@ export default function Comparator() {
         Promise.all(
             elemToCompar.map(elem =>
                 fetch(`${back}/softwares/${elem.id}`)
-                    .then(r => r.json())
-                    .then(d => d.software)
-                    .catch(() => null)
+                    .then(resp => resp.json())
+                    .then(data => data.software)
+                    .catch((error) => console.error(error))
             )
         ).then(setDetailedProducts);
     }, [elemToCompar]);
@@ -65,6 +65,11 @@ export default function Comparator() {
                 {!slot1 && !slot2 && (
                     <p className="relative z-10 text-center bg-gradient-to-r from-emerald-600 to-gray-700 mt-8 text-lg rounded-3xl">
                         Vai nella lista prodotti e clicca l'icona <span className="text-pink-500">bilancia</span> su due prodotti per confrontarli.
+                    </p>
+                )}
+                {!slot2 && (
+                    <p className={!slot1 ? "hidden" : "relative z-10 text-center bg-gradient-to-r from-emerald-600 to-gray-700 mt-8 text-lg rounded-3xl"}>
+                        aggiungi un altro prodotto per confrontarli !
                     </p>
                 )}
             </div>
