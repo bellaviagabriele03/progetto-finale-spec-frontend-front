@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import ParticleBackground from "../components/ParticleBackground";
 import { useGlobalContext } from "../context/GlobalContext";
 import { Plus, X } from "lucide-react";
@@ -17,6 +17,7 @@ export default function Comparator() {
     const [detailedProducts, setDetailedProducts] = useState([]);
 
     useEffect(() => {
+        window.scroll(top)
         if (elemToCompar.length === 0) {
             setDetailedProducts([]);
             return;
@@ -77,7 +78,7 @@ export default function Comparator() {
     );
 }
 
-function SlotCard({ product, onRemove, slotNumber }) {
+const SlotCard = memo(({ product, onRemove, slotNumber }) => {
     if (!product) {
         return (
             <div className="flex-1 max-w-sm border-2 border-dashed border-emerald-500 rounded-2xl flex flex-col items-center justify-center min-h-64 text-emerald-400 bg-gray-900/40">
@@ -107,9 +108,9 @@ function SlotCard({ product, onRemove, slotNumber }) {
             <span className="text-emerald-300">{product.category}</span>
         </div>
     );
-}
+})
 
-function ComparisonTable({ p1, p2 }) {
+const ComparisonTable = memo(({ p1, p2 }) => {
     return (
         <div className="bg-gradient-to-r from-gray-900 to-gray-800 border border-emerald-600 rounded-2xl overflow-hidden">
             <h3 className="text-center text-emerald-400 text-xl font-bold py-4 border-b border-emerald-700">
@@ -139,4 +140,4 @@ function ComparisonTable({ p1, p2 }) {
             </table>
         </div>
     );
-}
+})

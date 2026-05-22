@@ -1,5 +1,5 @@
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Card from "../components/Card";
 import ParticleBackground from "../components/ParticleBackground";
 import { useGlobalContext } from "../context/GlobalContext";
@@ -20,6 +20,12 @@ function debounce(callback, delay) {
 
 
 export default function Products() {
+
+
+    useEffect(() => {
+        window.scroll(top)
+    }, [])
+
     console.log("Rendering...")
     const { softwares } = useGlobalContext();
     const [query, setQuery] = useState("");

@@ -14,11 +14,11 @@ export default function ProductDetail() {
 
 
     useEffect(() => {
+        window.scroll(top)
         fetch(`${back}/softwares/${Number(id)}`)
             .then(resp => resp.json())
             .then(data => setOneSoftware(data.software))
     }, [id])
-    console.log(oneSoftware);
 
     return (
         <>
