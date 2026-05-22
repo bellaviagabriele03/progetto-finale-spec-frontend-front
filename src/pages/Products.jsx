@@ -1,5 +1,5 @@
 
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import Card from "../components/Card";
 import ParticleBackground from "../components/ParticleBackground";
 import { useGlobalContext } from "../context/GlobalContext";
@@ -7,8 +7,20 @@ import { Search } from "lucide-react";
 
 const CATEGORY_ORDER = { "accessories": 0, "console": 1, "videogiochi": 2 }
 
-export default function Products() {
+function debounce(callback, delay) {
+    let timer;
+    return (value) => {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+            callback(value)
+        }, delay)
+    }
+}
 
+
+
+export default function Products() {
+    console.log("Rendering...")
     const { softwares } = useGlobalContext();
     const [query, setQuery] = useState("");
     const [selectQuery, setSelectQuery] = useState("");
@@ -25,6 +37,7 @@ export default function Products() {
         }
     }
 
+    const queryDebounce = useCallback(debounce(setQuery, 600), [])
 
 
     const filterSoftware = useMemo(() => {
@@ -59,8 +72,7 @@ export default function Products() {
                         <div className="relative">
                             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-white w-4 h-4 pointer-events-none" />
                             <input
-                                value={query}
-                                onChange={e => setQuery(e.target.value)}
+                                onChange={e => queryDebounce(e.target.value)}
                                 className="bg-gradient-to-r from-emerald-600 to-gray-700 p-4 pl-9 rounded-3xl w-full"
                                 type="text"
                                 placeholder="Cerca per titolo..." />
