@@ -6,6 +6,7 @@ import WishList from "./pages/WishList"
 import Comparator from "./pages/Comparator"
 import GlobalContextProvider from "./context/GlobalContext"
 import ProductDetail from "./pages/ProductDetail"
+import ToastContextProvider from "./context/ToastContext"
 function App() {
 
 
@@ -14,15 +15,18 @@ function App() {
 
       <BrowserRouter>
         <GlobalContextProvider>
-          <Routes>
-            <Route path="/" element={<DefaultLayout />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/wishlist" element={<WishList />} />
-              <Route path="/comparator" element={<Comparator />} />
-              <Route path="/products/:id" element={<ProductDetail />} />
-            </Route>
-          </Routes>
+          <ToastContextProvider>
+            <Routes>
+              <Route path="/" element={<DefaultLayout />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/products" element={<Products />} />
+                <Route path="/wishlist" element={<WishList />} />
+                <Route path="/comparator" element={<Comparator />} />
+                <Route path="/products/:id" element={<ProductDetail />} />
+              </Route>
+            </Routes>
+          </ToastContextProvider>
+
         </GlobalContextProvider>
       </BrowserRouter>
 

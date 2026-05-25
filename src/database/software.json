@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "title": "The Legend of Zelda: Tears of the Kingdom",
+    "category": "videogiochi",
+    "price": 69.99,
+    "release_year": 2023,
+    "description": "Sequel diretto di Breath of the Wild: esplora Hyrule e i cieli soprastanti con nuovi poteri come Ultrahand e Ascesa.",
+    "img": "https://upload.wikimedia.org/wikipedia/en/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg",
+    "createdAt": "2025-01-10T10:00:00.000Z",
+    "updatedAt": "2025-01-10T10:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "title": "God of War Ragnarök",
+    "category": "videogiochi",
+    "price": 49.99,
+    "release_year": 2022,
+    "description": "Kratos e Atreus affrontano il Ragnarök attraverso i Nove Regni della mitologia norrena. Action-adventure con combattimenti brutali e narrazione epica.",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/2322010/header.jpg",
+    "createdAt": "2025-01-10T10:01:00.000Z",
+    "updatedAt": "2025-01-10T10:01:00.000Z"
+  },
+  {
+    "id": 3,
+    "title": "Elden Ring",
+    "category": "videogiochi",
+    "price": 59.99,
+    "release_year": 2022,
+    "description": "Action RPG open world sviluppato da FromSoftware e scritto da Hidetaka Miyazaki e George R.R. Martin. Esplora le Terre di Mezzo e diventa il Signore dell'Elden Ring.",
+    "img": "https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg",
+    "createdAt": "2025-01-10T10:02:00.000Z",
+    "updatedAt": "2025-01-10T10:02:00.000Z"
+  },
+  {
+    "id": 4,
+    "title": "Red Dead Redemption 2",
+    "category": "videogiochi",
+    "price": 29.99,
+    "release_year": 2018,
+    "description": "Prequel del classico western di Rockstar Games. Vivi la vita di Arthur Morgan e la banda Van der Linde nell'America del 1899, alle soglie della fine del Far West.",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg",
+    "createdAt": "2025-01-10T10:03:00.000Z",
+    "updatedAt": "2025-01-10T10:03:00.000Z"
+  },
+  {
+    "id": 5,
+    "title": "Cyberpunk 2077: Phantom Liberty",
+    "category": "videogiochi",
+    "price": 39.99,
+    "release_year": 2023,
+    "description": "Espansione standalone di Cyberpunk 2077 ambientata nel nuovo distretto di Dogtown. Spionaggio, tradimenti e scelte morali in una Night City ancora più oscura.",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/2138330/header.jpg",
+    "createdAt": "2025-01-10T10:04:00.000Z",
+    "updatedAt": "2025-01-10T10:04:00.000Z"
+  },
+  {
+    "id": 6,
+    "title": "Super Mario Odyssey",
+    "category": "videogiochi",
+    "price": 49.99,
+    "release_year": 2017,
+    "description": "Mario esplora mondi aperti e creativi con Cappy, il suo nuovo cappello senziente che permette di possedere nemici e oggetti. Platform 3D indispensabile per Nintendo Switch.",
+    "img": "https://upload.wikimedia.org/wikipedia/en/8/8d/Super_Mario_Odyssey.jpg",
+    "createdAt": "2025-01-10T10:05:00.000Z",
+    "updatedAt": "2025-01-10T10:05:00.000Z"
+  },
+  {
+    "id": 7,
+    "title": "PlayStation 5",
+    "category": "console",
+    "price": 499.99,
+    "release_year": 2020,
+    "description": "Console next-gen Sony con SSD ultra-rapido, ray tracing, 4K a 120fps e il rivoluzionario controller DualSense con feedback aptico e trigger adattivi.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/c/cb/PS5.JPG",
+    "createdAt": "2025-01-10T10:06:00.000Z",
+    "updatedAt": "2025-01-10T10:06:00.000Z"
+  },
+  {
+    "id": 8,
+    "title": "Nintendo Switch OLED",
+    "category": "console",
+    "price": 349.99,
+    "release_year": 2021,
+    "description": "Versione aggiornata della console ibrida Nintendo con schermo OLED da 7 pollici, dock con porta LAN integrata e audio migliorato. Gioca a casa o ovunque tu voglia.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Nintendo_Switch_-_OLED.JPG",
+    "createdAt": "2025-01-10T10:07:00.000Z",
+    "updatedAt": "2025-01-10T10:07:00.000Z"
+  },
+  {
+    "id": 9,
+    "title": "Xbox Series X",
+    "category": "console",
+    "price": 499.99,
+    "release_year": 2020,
+    "description": "La console più potente di Microsoft: 12 teraflop di GPU, SSD da 1TB, retrocompatibilità con quattro generazioni di giochi Xbox e supporto Game Pass.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/2/25/Xbox_Series_X_2_%28transparent_background%29.png",
+    "createdAt": "2025-01-10T10:08:00.000Z",
+    "updatedAt": "2025-01-10T10:08:00.000Z"
+  },
+  {
+    "id": 10,
+    "title": "DualSense Wireless Controller",
+    "category": "accessories",
+    "price": 69.99,
+    "release_year": 2020,
+    "description": "Controller ufficiale PS5 con feedback aptico avanzato, trigger adattivi, microfono integrato e batteria ricaricabile. Disponibile in vari colori.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Playstation_DualSense_Controller.png",
+    "createdAt": "2025-01-10T10:09:00.000Z",
+    "updatedAt": "2025-01-10T10:09:00.000Z"
+  },
+  {
+    "id": 11,
+    "title": "Nintendo Switch Pro Controller",
+    "category": "accessories",
+    "price": 69.99,
+    "release_year": 2017,
+    "description": "Controller premium per Nintendo Switch con stick analogici, vibrazione HD, amiibo NFC, batteria da 40 ore e connessione wireless Bluetooth.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Nintendo-Switch-Pro-Controller-FL.jpg",
+    "createdAt": "2025-01-10T10:10:00.000Z",
+    "updatedAt": "2025-01-10T10:10:00.000Z"
+  },
+  {
+    "id": 12,
+    "title": "Xbox Elite Wireless Controller Series 2",
+    "category": "accessories",
+    "price": 179.99,
+    "release_year": 2019,
+    "description": "Controller pro di Microsoft con paddle intercambiabili, stick e croce direzionale personalizzabili, tensione degli stick regolabile e batteria ricaricabile integrata da 40 ore.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Xbox_One_Elite_Wireless_Controller_Series_2_%28Model_1797%29.jpg",
+    "createdAt": "2025-01-10T10:11:00.000Z",
+    "updatedAt": "2025-01-10T10:11:00.000Z"
+  }
+]

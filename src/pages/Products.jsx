@@ -1,5 +1,5 @@
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Card from "../components/Card";
 import ParticleBackground from "../components/ParticleBackground";
 import { useGlobalContext } from "../context/GlobalContext";
@@ -28,7 +28,7 @@ export default function Products() {
 
     console.log("Rendering...")
     const { softwares } = useGlobalContext();
-    const [query, setQuery] = useState("");
+    const [query, setQuery] = useState("")
     const [selectQuery, setSelectQuery] = useState("");
     const [show, setshow] = useState(false)
     const [sortOrder, setSortOrder] = useState(1)
@@ -42,6 +42,9 @@ export default function Products() {
             setSortOrder(1);
         }
     }
+
+
+
 
     const queryDebounce = useCallback(debounce(setQuery, 600), [])
 
@@ -125,8 +128,8 @@ export default function Products() {
                             <div>
                                 <button
                                     onClick={() => {
-                                        setSelectQuery("")
                                         setQuery("")
+                                        setSelectQuery("")
                                         setshow(false)
                                         setSortOrder(1)
                                         setSortBy("videogiochi")
