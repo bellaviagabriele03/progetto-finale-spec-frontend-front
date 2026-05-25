@@ -18,7 +18,7 @@ export default function Comparator() {
     const [detailedProducts, setDetailedProducts] = useState([]);
 
     useEffect(() => {
-        window.scroll(top)
+        window.scrollTo(0, 0)
         if (elemToCompar.length === 0) {
             setDetailedProducts([]);
             return;
@@ -68,7 +68,7 @@ export default function Comparator() {
                     <p className="relative z-10 text-center bg-gradient-to-r from-emerald-600 to-gray-700 mt-8 text-lg rounded-3xl p-3">
                         Vai nella <NavLink to="/products" className="border-b">lista prodotti</NavLink>  e clicca l'icona <span className="text-pink-500">bilancia</span> su due prodotti per confrontarli.
                     </p>
-                    
+
                 )}
                 {!slot2 && (
                     <p className={!slot1 ? "hidden" : "relative z-10 text-center bg-gradient-to-r from-emerald-600 to-gray-700 mt-8 text-lg rounded-3xl"}>

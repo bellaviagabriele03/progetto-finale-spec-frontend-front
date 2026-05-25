@@ -12,7 +12,7 @@ export default function WishList() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        window.scroll(top)
+        window.scrollTo(0, 0)
     }, [])
 
 

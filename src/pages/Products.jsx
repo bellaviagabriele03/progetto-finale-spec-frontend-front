@@ -23,7 +23,7 @@ export default function Products() {
 
 
     useEffect(() => {
-        window.scroll(top)
+        window.scrollTo(0, 0)
     }, [])
 
     console.log("Rendering...")

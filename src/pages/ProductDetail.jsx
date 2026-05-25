@@ -14,7 +14,7 @@ export default function ProductDetail() {
 
 
     useEffect(() => {
-        window.scroll(top)
+        window.scrollTo(0, 0)
         fetch(`${back}/softwares/${Number(id)}`)
             .then(resp => resp.json())
             .then(data => setOneSoftware(data.software))
